@@ -10,6 +10,7 @@ import { ShiftsModule } from './shifts/shifts.module';
 import { AssignmentsModule } from './assignments/assignments.module';
 
 @Module({
+  
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     AuthModule,
