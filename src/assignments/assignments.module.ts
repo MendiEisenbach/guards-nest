@@ -1,9 +1,11 @@
 import { Module } from '@nestjs/common';
-import { AssignmentsController } from './assignments.controller';
 import { AssignmentsService } from './assignments.service';
+import { AssignmentsController } from './assignments.controller';
+import { JwtService } from '@nestjs/jwt';
 
 @Module({
   controllers: [AssignmentsController],
-  providers: [AssignmentsService]
+  providers: [JwtService,AssignmentsService],
+  exports: [AssignmentsService],
 })
 export class AssignmentsModule {}
